@@ -12,11 +12,6 @@ const fs = require('fs');
  | file for the application as well as bundling up all the JS files.
  |
  */
-// if (fs.exists("../back/"))
 mix.setPublicPath('../back/').js('js/app.js', 'static/js')
     .vue()
     .sass('sass/app.scss', 'static/css');
-// else
-// mix.js('js/app.js', 'static/js')
-//     .vue()
-//     .sass('sass/app.scss', 'static/css');

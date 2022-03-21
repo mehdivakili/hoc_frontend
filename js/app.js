@@ -6,10 +6,12 @@ import {createRouter, createWebHistory} from 'vue-router'
 
 
 import ExampleComponent from "./components/ExampleComponent";
+import NotFoundPage from "./components/NotFoundPage";
 
 
 const routes = [
     {path: '/', component: ExampleComponent},
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFoundPage },
 ]
 
 // 3. Create the router instance and pass the `routes` option
