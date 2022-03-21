@@ -13,10 +13,10 @@ const fs = require('fs');
  |
  */
 // if (fs.exists("../back/"))
-//     mix.setPublicPath('../back/').js('js/app.js', 'static/js')
-//         .vue()
-//         .sass('sass/app.scss', 'static/css');
+mix.setPublicPath('../back/').js('js/app.js', 'static/js')
+    .vue()
+    .sass('sass/app.scss', 'static/css');
 // else
-        mix.js('js/app.js', 'static/js')
-        .vue()
-        .sass('sass/app.scss', 'static/css');
+// mix.js('js/app.js', 'static/js')
+//     .vue()
+//     .sass('sass/app.scss', 'static/css');
