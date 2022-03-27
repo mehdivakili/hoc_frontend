@@ -14,4 +14,4 @@ const fs = require('fs');
  */
 mix.setPublicPath('../back/').js('js/app.js', 'static/js')
     .vue()
-    .sass('sass/app.scss', 'static/css');
+    .sass('sass/app.scss', 'static/css').sourceMaps();

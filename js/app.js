@@ -3,8 +3,6 @@ require('./bootstrap');
 import {createApp} from 'vue';
 import {createStore} from 'vuex';
 import {createRouter, createWebHistory} from 'vue-router'
-
-
 import ExampleComponent from "./components/ExampleComponent";
 import NotFoundPage from "./components/NotFoundPage";
 
