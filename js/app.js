@@ -3,13 +3,13 @@ require('./bootstrap');
 import {createApp} from 'vue';
 import {createStore} from 'vuex';
 import {createRouter, createWebHistory} from 'vue-router'
-import ExampleComponent from "./components/ExampleComponent";
-import NotFoundPage from "./components/NotFoundPage";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 
 
 const routes = [
-    {path: '/', component: ExampleComponent},
-  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFoundPage },
+    {path: '/', component: Home},
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]
 
 // 3. Create the router instance and pass the `routes` option
