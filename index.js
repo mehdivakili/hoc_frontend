@@ -18,3 +18,4 @@ fs.readFile('./index.html', function (err, html) {
         }
     }).listen(3000);
 });
+console.log("host now is serve on : http://localhost:3000")
