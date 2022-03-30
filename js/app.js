@@ -1,15 +1,21 @@
-require('./bootstrap');
-
 import {createApp} from 'vue';
 import {createStore} from 'vuex';
 import {createRouter, createWebHistory} from 'vue-router'
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import Base from "./pages/Base";
+import About from "./pages/About";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
+require('./bootstrap');
 
 const routes = [
     {path: '/', component: Home},
-  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+    {path: '/about', component: About},
+    {path: '/login', component: Login},
+    {path: '/register', component: Register},
+    {path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound},
 ]
 
 // 3. Create the router instance and pass the `routes` option
@@ -35,7 +41,7 @@ const store = createStore({
         }
     }
 })
-let app = createApp({})
+let app = createApp(Base)
 
 // const files = require.context('./components', true, /\.vue$/i)
 // files.keys().map(key => app.component(key.split('/').pop().split('.')[0], files(key).default))

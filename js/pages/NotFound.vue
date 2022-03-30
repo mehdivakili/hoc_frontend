@@ -1,10 +1,16 @@
 <template>
-  <h1>Not Found</h1>
+  <div>
+
+    <h1>Not Found</h1>
+  </div>
 </template>
 
 <script>
+import Header from "../globalComponents/Head";
+
 export default {
-name: "NotFoundPage"
+  name: "NotFoundPage",
+  components: {Header}
 }
 </script>
 

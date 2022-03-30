@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <router-link class="navbar-brand" to="/">
       <img class="img-fluid" src="static/images/logo.png">
     </router-link>
@@ -13,11 +13,10 @@
             class="sr-only">{{ navItem.title }}</span></router-link>
       </div>
       <div class="button-container">
-        <router-link to="/" class="head-button login-button">ورود</router-link>
-        <router-link to="/" class="head-button register-button">ثبت نام</router-link>
+        <router-link to="/login" class="head-button login-button">ورود</router-link>
+        <router-link to="/register" class="head-button register-button">ثبت نام</router-link>
       </div>
     </div>
-
   </nav>
 </template>
 
@@ -37,6 +36,10 @@ export default {
 </script>
 
 <style scoped>
+nav {
+  background: white;
+}
+
 .nav-item {
   color: #004948 !important;
   padding-left: 48px !important;
@@ -57,6 +60,7 @@ export default {
 .head-button {
   width: 90px;
   text-align: center;
+  text-decoration: none;
 }
 
 .head-button.register-button {

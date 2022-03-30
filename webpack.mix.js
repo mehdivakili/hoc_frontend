@@ -12,6 +12,6 @@ const fs = require('fs');
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.sourceMaps(true,'source-map')/*.setPublicPath('../back/')*/.js('js/app.js', 'static/js')
+mix.sourceMaps(true,'source-map').setPublicPath('../back/').js('js/app.js', 'static/js')
     .vue()
     .sass('sass/app.scss', 'static/css');
