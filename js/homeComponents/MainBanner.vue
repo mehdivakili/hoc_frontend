@@ -35,10 +35,9 @@ export default {
 .banner {
   background-image: v-bind('imageUrl');
   box-sizing: content-box;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
-  height: 684px;
+  height: 650px;
   flex-direction: column;
   justify-content: center;
   text-align: center;

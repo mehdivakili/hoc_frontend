@@ -1,6 +1,13 @@
 import {createApp} from 'vue';
 import {createStore} from 'vuex';
 import {createRouter, createWebHistory} from 'vue-router'
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {faQuestionCircle, faPhone, faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
+
+library.add(faQuestionCircle)
+library.add(faPhone)
+library.add(faEnvelope)
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Base from "./pages/Base";
@@ -32,12 +39,12 @@ const router = createRouter({
 const store = createStore({
     state() {
         return {
-            count: 0
+            menu: []
         }
     },
     mutations: {
-        increment(state) {
-            state.count++
+        setMenu(state, data) {
+            state.menu = data
         }
     }
 })
@@ -46,6 +53,7 @@ let app = createApp(Base)
 // const files = require.context('./components', true, /\.vue$/i)
 // files.keys().map(key => app.component(key.split('/').pop().split('.')[0], files(key).default))
 
+app.component('font-awesome-icon', FontAwesomeIcon)
 
 app.use(store)
 app.use(router)

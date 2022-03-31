@@ -1,7 +1,5 @@
 <template>
   <div>
-    <Head/>
-
     <MainBanner image="static/images/main_banner.png" alt="" text-color="white"/>
 
     <Banner text-color="#004948" bg-color="#FEFEFE" image="static/images/banner1.png" alt="یک عکس">
@@ -48,19 +46,22 @@
         بتونیم این همایش رو به بهترین شکل و کیفیت ممکن برگزار کنیم و صمیمانه منتظر حضور گرم تک تک شما هستیم.
       </template>
     </Banner>
+
+    <Questions/>
   </div>
 
 </template>
 
 <script>
 
-import Head from "../globalComponents/Head";
 import Banner from "../homeComponents/Banner";
 import MainBanner from "../homeComponents/MainBanner";
+import Questions from "../homeComponents/Questions";
 
 export default {
   components: {
-    Head, Banner, MainBanner
+    Questions,
+    Banner, MainBanner,
   }
 }
 </script>

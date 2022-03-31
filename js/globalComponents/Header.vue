@@ -9,8 +9,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <router-link v-for="navItem in navItems" class="nav-item nav-link" :to="navItem.link">{{ navItem.title }}<span
-            class="sr-only">{{ navItem.title }}</span></router-link>
+        <router-link v-for="navItem in navItems" class="nav-item nav-link" :to="navItem.link">{{
+            navItem.title
+          }}
+        </router-link>
       </div>
       <div class="button-container">
         <router-link to="/login" class="head-button login-button">ورود</router-link>
@@ -21,16 +23,22 @@
 </template>
 
 <script>
+
+
 export default {
   name: "Header",
   data() {
-    return {
-      navItems: [
-        {title: "خانه", link: "/"},
-        {title: "درباره", link: "/about"},
-
-      ]
+    return {}
+  },
+  computed: {
+    navItems() {
+      return this.$store.state.menu
     }
+  },
+  mounted() {
+    axios.post(window.location.origin + '/api/menu').then((response) => {
+      this.$store.commit('setMenu', response.data)
+    })
   }
 }
 </script>

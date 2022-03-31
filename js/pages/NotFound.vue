@@ -6,11 +6,9 @@
 </template>
 
 <script>
-import Header from "../globalComponents/Head";
 
 export default {
   name: "NotFoundPage",
-  components: {Header}
 }
 </script>
 

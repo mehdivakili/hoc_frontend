@@ -1,5 +1,5 @@
 <template>
-  <Head/>
+  <Header/>
   <div style="margin-top:90px">
 
     <router-view v-slot="{ Component }">
@@ -8,15 +8,18 @@
       </transition>
     </router-view>
   </div>
+  <Footer/>
 </template>
 
 <script>
-import Head from "../globalComponents/Head";
+import Header from "../globalComponents/Header";
+import Footer from "../globalComponents/Footer";
 
 export default {
   name: "Base",
   components: {
-    Head
+    Footer,
+    Header
   }
 }
 </script>
